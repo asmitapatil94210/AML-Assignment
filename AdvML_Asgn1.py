@@ -337,10 +337,6 @@ with tf.Session() as sess:
             # Calculate the accuracy on the batch of training data
             train_accuracy += sess.run(accuracy, feed_dict=feed_dict_train)
             
-            # Generate summary with the current batch of data and write to file
-            #summ = sess.run(merged_summary, feed_dict=feed_dict_train)
-            #writer.add_summary(summ, epoch*int(len(train_x)/batch_size) + batch)
-            
             current_batch = current_batch + batch_size
         
           
